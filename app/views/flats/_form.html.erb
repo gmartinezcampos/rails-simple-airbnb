@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <div class="container">
+    <%= form_for @flat do |f| %>
+      <div class="form-group">
+        <%= f.label :name,  "Name" %>
+        <%= f.text_field :name, class:"form-control"  %>
+      </div>
+      <div class="form-group">
+        <%= f.label :address, "Address" %>
+        <%= f.text_field :address, class:"form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description, "Description" %>
+        <%= f.text_field :description, class:"form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :price_per_night, "Price per night" %>
+        <%= f.text_field :price_per_night, class:"form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :number_of_guests, "number_of_guests" %>
+        <%= f.select :number_of_guests, (0..10), class:"form-control" %>
+      </div>
+        <%= f.submit class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

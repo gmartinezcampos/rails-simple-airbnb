@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>Flats</h1>
+    <div class="row">
+      <% @flats.each do |flat| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <%= link_to(edit_flat_path(flat), class:"card-link") do %>
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(255,255,255,0.6) 0%, rgba(0,0,0,0.6) 50%), url(https://picsum.photos/350/225/?random
+  );">
+              <h4><%= flat.name %></h4>
+              <div class="card-content">
+                <p><%= flat.address %></p>
+                <p><%= flat.description %></p>
+                <p> <%= flat.price_per_night %> </p>
+                <p> <%= flat.number_of_guests %> </p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
